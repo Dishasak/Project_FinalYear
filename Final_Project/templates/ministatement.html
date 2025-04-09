@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+
+	<script type="text/javascript"> 
+        function preventBack() { 
+            window.history.forward();  
+        } 
+          
+        setTimeout("preventBack()", 0); 
+          
+        window.onunload = function () { null }; 
+    </script> 
+	
+	
+	
+<style type="text/css">
+<!--
+.style5 {font-size: 24px; color: #0000FF; }
+-->
+</style>
+</head>
+
+<body>
+<p align="center" class="style5">Mini Statement</p>
+<form id="form1" name="form1" method="post" action="ministat">
+  <table width="343" border="1" align="center">
+    <tr>
+      <td width="145"><span class="style5">Account No</span></td>
+      <td width="182"><input name="accno" type="text" id="accno" Placeholder="Account No"/></td>
+    </tr>
+  </table>
+</form>
+<table width="836" height="68" border="1" align="center">
+  <tr>
+    <td width="178" bgcolor="#FFFF99" class="style5">Date</td>
+    <td width="233" bgcolor="#FFFF99" class="style5">Descriptiom</td>
+    <td width="130" bgcolor="#FFFF99"><span class="style5">Debit </span></td>
+    <td width="156" bgcolor="#FFFF99"><span class="style5">Credit</span></td>
+    <td width="105" bgcolor="#FFFF99"><span class="style5">Balance</span></td>
+  </tr>
+{% for item in data %}
+  <tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[2]}}</td>
+    <td>{{item[3]}}</td>
+    <td>{{item[4]}}</td>
+    <td>{{item[5]}}</td>
+  </tr>
+{% endfor %}
+</table>
+	  <p align="center"><a href="/home"><span class="title style1">( <a href="/div2bak">Back</a> )</span></a></p>
+<p>&nbsp;</p>
+</body>
+</html>

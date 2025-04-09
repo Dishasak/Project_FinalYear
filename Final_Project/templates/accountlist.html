@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab - youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Customer List</title>
+	
+		<script type="text/javascript"> 
+        function preventBack() { 
+            window.history.forward();  
+        } 
+          
+        setTimeout("preventBack()", 0); 
+          
+        window.onunload = function () { null }; 
+    </script> 
+	
+	
+	
+    <style type="text/css">
+<!--
+.style1 {font-size: 24px}
+body {
+	background-color: #CCFFFF;
+}
+.style2 {
+	font-size: 24px;
+	color: #0000FF;
+	font-weight: bold;
+}
+.style3 {font-size: 18px}
+-->
+    </style>
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+  <p class="style2">
+    Customer Account List</p>
+  <table width="1280" border="1" align="center"  >
+  <tr>
+    <td width="173" height="47" bgcolor="#FFFF99" class="style1"><div align="center" class="style1">Account Number </div></td>
+    <td width="323" bgcolor="#FFFF99" class="style1"><div align="center" class="style1">Full Name </div></td>
+    <td width="188" bgcolor="#FFFF99" class="style1"><div align="center" class="style1">Mobile No </div></td>
+    <td width="202" bgcolor="#FFFF99" class="style1"><div align="center" class="style1">Email Id </div></td>
+    <td width="146" bgcolor="#FFFF99" class="style1">Balance</td>
+    <td width="208" bgcolor="#FFFF99" class="style1"><div align="center" class="style1">KYC Status </div></td>
+  </tr>
+{% for item in data %}
+  <tr>
+    <td height="33" bgcolor="#FFFF99" class="style3">{{item[1]}}</td>
+    <td bgcolor="#FFFF99" class="style3">{{item[0]}}</td>
+    <td bgcolor="#FFFF99" class="style3">{{item[5]}}</td>
+    <td bgcolor="#FFFF99" class="style3">{{item[4]}}</td>
+    <td bgcolor="#FFFF99" class="style3">{{item[6]}}</td>
+    <td bgcolor="#FFFF99" class="style3">{{item[12]}}</td>
+  </tr>
+{% endfor %}
+</table>
+<p align="center"><span class="title style1"><strong> </strong> ( <a href="/div2bak">Back</a> ) </span></p>
+</body>
+</html>
